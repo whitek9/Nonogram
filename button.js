@@ -1,11 +1,15 @@
 $(document).ready( function() {
-    $('div').on('click','div', function() {
-      if ($(this).hasClass('nonogramNode')) {
-        $(this).toggleClass('checked')
-      } else if ($(this).hasClass('checked')) {
-        $(this).toggleClass('checkedOff')
-      } else {
-        $(this).toggleClass('nonogramNode')
-      }
-    })
+    
+  $('#nonogramNode').on('click', function() {
+      
+    if ($(this).hasClass('unChecked')) {
+      $(this).removeClass('unChecked').addClass('checkedOn')
+    
+    } else if ($(this).hasClass('checkedOn')) {
+      $(this).removeClass('checkedOn').addClass('checkedOff')
+    
+    } else {
+      $(this).removeClass('checkedOff').addClass('unChecked')
+    }
   })
+})
