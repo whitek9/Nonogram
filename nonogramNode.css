@@ -5,6 +5,10 @@
   border-style: solid;
 }
 
+.nonogramNode:hover {
+  border-style: inset;
+}
+
 .unChecked {
   background: white;
 }
